@@ -17,7 +17,10 @@ class CupomController extends Controller
             $result = true;
         }        
         
-        return response()->json(['result'=>$result]);
+        return response()->json([
+            'result'=>$result,
+            'cupom'=>$cupom
+        ]);
     }
     
     public function store(Request $request)
